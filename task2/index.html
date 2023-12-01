@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="page1">
+        <div class="indicator">
+            <div id="indicator1" class="page-indicator page-indicator-bg-color">
+                Step One
+            </div>
+            <div id="indicator2" class="page-indicator">
+                Step two
+            </div>
+            <div id="indicator3" class="page-indicator">
+                Step three
+            </div>
+        </div>
+        <div class="form">
+
+            <h2 id="head" class="form-heading">RESOURCE</h2>
+            <div class="form-group">
+                <span style="color: red;">*</span>
+
+                <input class="input" type="text" id="title" name="title" placeholder="Title" onchange="validateTitle()"
+                    onfocus="validateTitle()" required><br>
+
+                <span class="titleError"></span>
+            </div>
+
+            <div class="form-group dropdown">
+
+                <span style="color: red; ">*</span>
+                <div>
+                    <label style="font-size: 30px; display: block;" for="type">Type</label>
+
+                    <select class="select-option" id="type" name="type" onchange="validateOptionIsSelected()"
+                        onfocus="validateOptionIsSelected()">
+                        <option value="">Select One</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                </div><br>
+                <span class="selectError"></span>
+
+            </div>
+
+            <!-- Textbox for Description -->
+            <div class="form-group">
+                <span style="color: red;">*</span>
+                <textarea id="description" class="description" name="description" onchange="validateDescription()"
+                    onfocus="validateDescription()" placeholder="Please add as much detail as possible"
+                    required></textarea>
+                <br>
+                <span class="descriptionError"></span>
+
+            </div>
+
+            <div class="form-group">
+                <input type="file" id="file" name="file">
+            </div>
+
+            <div class="break"></div>
+
+            <h2 style="color: blue; font-weight: 100;">TYPE</h2>
+            <p>Alison, I think this is what you are looking for but we will need to discuss</p>
+
+            <div class="form-group">
+                <input type="checkbox" name="checkbox">
+                <label style="font-weight: bold;" for="checkbox">Checklist</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="checkbox">
+                <label style="font-weight: bold;" for="checkbox">Drill, Tablet or Other Exercise</label>
+            </div>
+
+
+            <div style="display: flex; justify-content: end;">
+                <button id="continue1" class="continue-btn" onclick="validateIstForm()">
+                    Continue
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 2nd page -->
+    <section id="page2" style="display: none;">
+
+        <div class="indicator">
+            <div id="indicator4" class="page-indicator page-indicator-bg-color">
+                Step One
+            </div>
+            <div id="indicator5" class="page-indicator page-indicator-bg-color">
+                Step two
+            </div>
+            <div id="indicator6" class="page-indicator">
+                Step three
+            </div>
+        </div>
+
+        <div class="form">
+
+            <h2 class="form-heading">AUTHORING AGENCY</h2>
+
+            <div class="form-group">
+                <span style="color: red;">*</span>
+
+                <input class="input" type="text" id="org-name" name="org-name" placeholder="Organisation"
+                    onchange="validateOrgName()" onfocus="validateOrgName()" required><br>
+
+                <span class="org-name-error"></span>
+            </div>
+
+            <div class="form-group">
+                <span style="color: red;">*</span>
+
+                <input class="input" type="text" id="url" name="url" placeholder="Organisation Website URL"
+                    onchange="validateOrgUrl()" onfocus="validateOrgUrl()" required><br>
+
+                <span class="url-error"></span>
+            </div>
+
+            <h2 style="color: grey; font-weight: 100;">Grantee Status</h2>
+            <p>Is your agency a current or former Grants to States for School Emergency Management (GSEM), Readiness and
+                Emergency Management for Schools (REMS), or Emergency Management for Higher Education (EMHE) grantee?
+            </p>
+
+            <div>
+                <div class="form-group">
+                    <p>My agency is a current GSEM grantee</p>
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">Yes</label>
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">No</label>
+                </div>
+                <div class="form-group">
+                    <p>My agency is a former GSEM grantee.</p>
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">Yes</label>
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">No</label>
+                </div>
+                <div class="form-group">
+                    <p>My agency is a former REMS grantee.</p>
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">Yes</label>
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">No</label>
+                </div>
+                <div class="form-group">
+                    <p>My agency is a former EMHE grantee.</p>
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">Yes</label>
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">No</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">No, my agency is not a current or former GSEM, REMS, or EMHE grantee.</label>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between">
+                <button id="back1" class="back-btn" onclick="navigateToPage('page2','page1')">
+                    Back
+                </button>
+                <button id="continue2" class="continue-btn" onclick="validate2ndForm()">
+                    Continue
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3rd page -->
+    <section id="page3" style="display: none;">
+
+        <div class="indicator">
+            <div id="indicator7" class="page-indicator page-indicator-bg-color">
+                Step One
+            </div>
+            <div id="indicator8" class="page-indicator page-indicator-bg-color">
+                Step two
+            </div>
+            <div id="indicator9" class="page-indicator page-indicator-bg-color">
+                Step three
+            </div>
+        </div>
+
+        <div class="form">
+
+            <h2 class="form-heading">Submission and Authorization</h2>
+
+
+            <h2 style="color: grey; font-weight: 100;">Terms of Submission</h2>
+
+
+            <div>
+
+                <div class="form-group">
+                    <span style="color: red;">*</span>
+                    <input type="checkbox" id="checkbox1" name="checkbox1">
+                    <span class="checkbox1Error"></span>
+
+                    <label>I agree to the Terms of Submission by providing this information, you agree
+                        that you are authorized to release this resource to the REMS TA Center for general inclusion on
+                        the Tool Box, if selected</label>
+                </div>
+                <div class="form-group">
+                    <span style="color: red;">*</span>
+                    <input type="checkbox" id="checkbox2" name="checkbox2">
+                    <span class="checkbox2Error"></span>
+
+                    <label for="checkbox2">I have permission and proper copyright clearance to allow the REMS TA Center
+                        to post this document as a part of the Tool Box</label>
+                </div>
+
+
+            </div>
+
+            <div class="break"></div>
+
+            <div style="padding-top: 30px;">
+                <div class="form-group">
+                    <span style="color: red;">*</span>
+
+                    <input class="input" type="text" id="first-name" name="first-name" placeholder="First Name"
+                        onchange="validateFirstName()" onfocus="validateFirstName()" required><br>
+
+                    <span class="first-name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <span style="color: red;">*</span>
+
+                    <input class="input" type="text" id="last-name" name="last-name" placeholder="Second Name"
+                        onchange="validateLastName()" onfocus="validateLastName()" required><br>
+
+                    <span class="last-name-error"></span>
+                </div>
+                <div class="form-group">
+                    <span style="color: red;">*</span>
+
+                    <input class="input" type="text" id="org-name2" name="org-name2" placeholder="Organisation"
+                        onchange="validateOrgName2()" onfocus="validateOrgName2()" required><br>
+
+                    <span class="org-name-error2"></span>
+                </div>
+
+                <div class="form-group">
+                    <span style="color: red;">*</span>
+
+                    <input class="input" type="text" id="work-phone" name="work-phone" placeholder="Work Phone"
+                        onchange="validateWorkPhone()" onfocus="validateWorkPhone()" required><br>
+
+                    <span class="phone-error"></span>
+                </div>
+                <div class="form-group">
+                    <span style="color: red;">*</span>
+
+                    <input class="input" type="text" id="work-email" name="work-email" placeholder="Work Email"
+                        onchange="validateWorkEmail()" onfocus="validateWorkEmail()" required><br>
+
+                    <span class="email-error"></span>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between">
+                <button id="back2" class="back-btn" onclick="navigateToPage('page3','page2')">
+                    Back
+                </button>
+                <button id="submit" class="submit-btn" onclick="validate3rdForm()">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

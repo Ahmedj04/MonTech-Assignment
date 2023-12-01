@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+}
+
+.accordion {
+    width: 50%;
+    margin: 30px auto auto;
+    padding: 10px 15px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tile {
+    border-bottom: 1px solid #000;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.active {
+    background-color: #ddd;
+}
+
+.faq-content {
+    width: 70%;
+    padding: 20px;
+}
+
+.faq-child {
+    display: none;
+}

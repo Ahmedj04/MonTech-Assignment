@@ -1,0 +1,121 @@
+.indicator {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.page-indicator-bg-color {
+    background-color: rgb(30, 30, 181);
+    color: white;
+}
+
+.page-indicator {
+    width: 50px;
+    /* Adjust the size as needed */
+    height: 50px;
+    padding: 10px;
+    border: 5px solid;
+    text-align: center;
+    border-radius: 50%;
+    border-color: black;
+}
+
+.form {
+    width: 50%;
+    margin: 30px auto auto;
+    padding: 10px 15px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.form-heading {
+    padding: 5px 0px;
+    color: blue;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.form-group {
+    padding-bottom: 20px;
+}
+
+.input {
+    width: 80%;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 10px;
+
+}
+
+.dropdown {
+    width: 100%;
+    display: flex;
+}
+
+.select-option {
+    width: 100%;
+    padding: 10px 0px;
+    margin-top: 10px;
+}
+
+.description {
+    width: 80%;
+    height: 200px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.break {
+    width: auto;
+    border: 3px solid grey;
+}
+
+.continue-btn {
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.back-btn {
+    padding: 10px 15px;
+    background-color: grey;
+    color: white;
+    border: none;
+}
+
+.Error {
+    color: red;
+    font-size: .875em;
+}
+
+.background-green {
+    background-color: rgb(112, 227, 112);
+}
+
+.background-yellow {
+    background-color: yellow;
+}
+
+/* Add this CSS class for animation */
+.slide-in-from-right {
+    animation: slideInFromRight 0.2s ease-out;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

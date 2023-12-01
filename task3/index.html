@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="accordion">
+            <h1>General</h1>
+            <div>
+                <!-- title 1 -->
+                <div class="tile">
+                    <div class="heading">
+                        <h3>What is Material?</h3>
+                        <span class="sign">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Material creates thoughtfully designed things for your kitchen, transforming
+                            everyday objects into items that bring you joy. No more hand-me-down melted plastic tools or
+                            junk drawers full of I-used-them-once items (avocado slicer, anyone?). We're obsessed with
+                            good
+                            design, high-performing products, and making "keep for life" kitchenware.
+                        </p>
+                        <div>
+                            <ul>
+                                <li><a href="#" class="faq-link" data-faq="faq-child-1">Child Link 1</a></li>
+                                <li><a href="#" class="faq-link" data-faq="faq-child-2">Child Link 2</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- title 2 -->
+                <div class="tile">
+                    <div class="heading">
+                        <h3>How can I contact Material?</h3>
+                        <span class="sign">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We’d love to hear from you! Send any questions or thoughts to
+                            hello@materialkitchen.com, or tag @materialkitchen.
+                        </p>
+                        <div>
+                            <ul>
+                                <li><a href="#" class="faq-link" data-faq="faq-child-3">Child Link 3</a></li>
+                                <li><a href="#" class="faq-link" data-faq="faq-child-4">Child Link 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="faq-content">
+            <div class="faq-child" id="faq-child-1">
+                <h2>FAQ Child 1</h2>
+                <p>This is the content for the first child link under Parent Heading 1.</p>
+            </div>
+            <div class="faq-child" id="faq-child-2">
+                <h2>FAQ Child 2</h2>
+                <p>Here's the content for the second child link under Parent Heading 1.</p>
+            </div>
+            <div class="faq-child" id="faq-child-3">
+                <h2>FAQ Child 3</h2>
+                <p>This is the content for the first child link under Parent Heading 2.</p>
+            </div>
+            <div class="faq-child" id="faq-child-4">
+                <h2>FAQ Child 4</h2>
+                <p>Here's the content for the second child link under Parent Heading 2.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
