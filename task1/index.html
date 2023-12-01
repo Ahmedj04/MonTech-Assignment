@@ -5,51 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Video Carousel Example</title>
-    <style>
-        /* Carousel container */
-        .carousel {
-            width: 100%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        /* Carousel items */
-        .carousel-inner {
-            display: flex;
-            gap: 20px;
-            /* Add gap between items */
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-item {
-            min-width: calc(100% / 3 - 20px);
-            /* Adjust the width based on the number of visible items and gap */
-            box-sizing: border-box;
-        }
-
-        /* Navigation arrows */
-        .carousel-prev,
-        .carousel-next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            color: white;
-            background-color: black;
-            border: none;
-            padding: 10px;
-            outline: none;
-        }
-
-        .carousel-prev {
-            left: 10px;
-        }
-
-        .carousel-next {
-            right: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -57,31 +13,25 @@
     <div class="carousel">
         <div class="carousel-inner">
             <div class="carousel-item">
-                <!-- Replace the following iframe with your YouTube embed code -->
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/ItJJFiDNDA8"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
             <div class="carousel-item">
-                <!-- Replace the following iframe with your YouTube embed code -->
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/dmFwB0WEEDY"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
             <div class="carousel-item">
-                <!-- Replace the following iframe with your YouTube embed code -->
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/HddwLZ7W3AI"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <!-- Add more iframes as needed -->
+
             <div class="carousel-item">
-                <!-- Replace the following iframe with your YouTube embed code -->
-                <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0"
-                    allowfullscreen></iframe> -->
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/ItJJFiDNDA8"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -89,14 +39,12 @@
             </div>
 
             <div class="carousel-item">
-                <!-- Replace the following iframe with your YouTube embed code -->
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/HddwLZ7W3AI"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
             <div class="carousel-item">
-                <!-- Replace the following iframe with your YouTube embed code -->
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/HddwLZ7W3AI"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -105,53 +53,13 @@
         </div>
 
         <!-- Navigation arrows -->
-        <button class="carousel-prev">&lt;</button>
-        <button class="carousel-next">&gt;</button>
+        <button class="carousel-prev">Previous</button>
+        <button class="carousel-next">Next</button>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var currentIndex = 0;
-            var items = $('.carousel-item');
-            var totalItems = items.length;
-
-            updateButtons(); // Initially update button visibility
-
-            $('.carousel-next').click(next);
-            $('.carousel-prev').click(prev);
-
-            function updateButtons() {
-                $('.carousel-prev').toggle(currentIndex > 0); // Show/hide Previous button
-                $('.carousel-next').toggle(currentIndex < totalItems - 3); // Show/hide Next button
-            }
-
-            function next() {
-                if (currentIndex < totalItems - 3) {
-                    currentIndex++;
-                    updateCarousel();
-                    updateButtons();
-                }
-            }
-
-            function prev() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateCarousel();
-                    updateButtons();
-                }
-            }
-
-            function updateCarousel() {
-                var translateValue = -currentIndex * (100 / 3) + '%';
-                $('.carousel-inner').css('transform', 'translateX(' + translateValue + ')');
-            }
-
-
-        });
-    </script>
-
-
+    <script type="text/javascript" src="script.js"></script>
 
 </body>
 
